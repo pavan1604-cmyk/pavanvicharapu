@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pavan Kumar Vicharapu - Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="video-container">
+    <video autoplay loop muted playsinline class="background-video">
+      <source src="170655-843752693.mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
+    <div class="content-box">
+      <div class="content">
+        <h1 class="text-animate">
+          Hello, I am <span class="name-highlight">Pavan Kumar Vicharapu</span>
+        </h1>
+        <p class="motivational-fact typing-animation">
+          I am passionate about becoming a Data Analyst
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Social Media Links Section -->
+  <div class="social-links">
+    <div class="social-icon-container">
+      <a href="https://www.instagram.com/pavanvicharapu2003/" target="_blank" class="social-icon instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/pavan-kumar-vicharapu-35a30a233/" target="_blank" class="social-icon linkedin">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/pavan1604-cmyk" target="_blank" class="social-icon github">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Hamburger Menu Icon -->
+  <div class="hamburger-menu" onclick="toggleNav()">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <!-- Navigation Links Section (Right Slide-in Menu) -->
+  <div class="nav-links" id="navLinks">
+    <ul>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="skills.html">Skills</a></li> <!-- Added Skills link here -->
+      <li><a href="Projects.html">Projects</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+    </ul>
+  </div>
+
+  <script>
+    // JavaScript to toggle the navigation menu
+    function toggleNav() {
+      const nav = document.getElementById("navLinks");
+      const hamburger = document.querySelector(".hamburger-menu");
+      nav.classList.toggle("open");
+      hamburger.classList.toggle("open"); // Add class to trigger animation
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Slightly lighter overlay to reveal the video */
+  z-index: 2;
+}
+
+.content-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3rem; /* Consistent padding for the box */
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  z-index: 3;
+  width: 90%;
+  max-width: 800px; /* Keep the max-width for the box */
+  min-height: 150px; /* Fixed minimum height */
+  height: auto; /* Allow content to fit naturally */
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #f8f9fa; /* Light text */
+  line-height: 1.5;
+}
+
+.content h1 .name-highlight {
+  color: #ff6f61; /* Vibrant color for name */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.content p {
+  font-size: 1.5rem; /* Consistent font size */
+  font-weight: 300;
+  color: #f1f1f1; /* Slightly lighter than the box */
+  font-style: italic;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+/* Typing effect without cursor */
+.typing-animation {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 4s steps(35) 1s forwards; /* Adjusted for shorter text */
+}
+
+/* Social Links */
+.social-links {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  z-index: 4;
+}
+
+.social-icon-container {
+  display: flex;
+  gap: 20px; /* Space between the social icons */
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent box */
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.social-icon {
+  font-size: 2rem;
+  color: #f1f1f1; /* Default color */
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth color and movement transition */
+}
+
+/* Instagram color */
+.social-icon.instagram {
+  color: #E1306C; /* Instagram's original color */
+}
+
+/* LinkedIn color */
+.social-icon.linkedin {
+  color: #0077B5; /* LinkedIn's original color */
+}
+
+/* GitHub color */
+.social-icon.github {
+  color: #181717; /* GitHub's original color */
+}
+
+/* On hover, move icons slightly but keep their original color */
+.social-icon:hover {
+  transform: translateY(-5px); /* Moves the icon slightly upwards */
+}
+
+/* Typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Navigation Links (Right Slide-in Menu) */
+.nav-links {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Initially off-screen */
+  width: 250px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Increased opacity for a darker box */
+  z-index: 5;
+  transition: right 0.3s ease-in-out;
+}
+
+.nav-links.open {
+  right: 0; /* Slide in */
+}
+
+.nav-links ul {
+  list-style-type: none;
+  padding-top: 60px; /* Add space for the hamburger menu */
+  text-align: center;
+}
+
+.nav-links li {
+  padding: 20px 0;
+  font-size: 1.5rem;
+}
+
+/* Navigation links styling */
+.nav-links a {
+  color: #f1f1f1;
+  text-decoration: none;
+  display: block;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  padding: 12px 20px;
+  border-radius: 50px; /* Oval shape */
+  position: relative;
+  margin: 10px 0; /* Add some margin for spacing between items */
+}
+
+/* Hover Effects with Smaller Oval Background */
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%; /* Reduced width for a smaller oval */
+  height: 50%; /* Reduced height for a smaller oval */
+  background-color: #00bcd4; /* Teal color */
+  opacity: 0;
+  transition: opacity 0.3s ease, width 0.3s ease, height 0.3s ease;
+  z-index: -1;
+  border-radius: 50px; /* Oval shape */
+  transform: translate(-50%, -50%);
+}
+
+/* When hovering, show background color */
+.nav-links a:hover::before {
+  opacity: 1;
+  width: 80%; /* Slightly increase width on hover */
+  height: 60%; /* Slightly increase height on hover */
+}
+
+/* On hover, text grows slightly and color changes */
+.nav-links a:hover {
+  color: white; /* Change text color */
+  transform: scale(1.1); /* Slightly grow the link */
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 6;
+  transition: 0.4s;
+}
+
+.hamburger-menu.open .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px); /* Rotate top line to form 'X' */
+}
+
+.hamburger-menu.open .line:nth-child(2) {
+  opacity: 0; /* Hide the middle line */
+}
+
+.hamburger-menu.open .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px); /* Rotate bottom line to form 'X' */
+}
+
+.hamburger-menu .line {
+  width: 30px;
+  height: 4px;
+  background-color: #f1f1f1;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .social-links {
+    bottom: 15px;
+  }
+
+  .social-icon-container {
+    padding: 8px 16px;
+  }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Page</title>
+    <link rel="stylesheet" href="nice.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="skills-section">
+        <h2>My Skills</h2>
+        <div class="skill-item">
+            <div class="skill-name"><i class="fas fa-database"></i> SQL</div>
+            <div class="skill-bar">
+                <div class="skill" id="sql"></div>
+            </div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-name"><i class="fab fa-python"></i> Python</div>
+            <div class="skill-bar">
+                <div class="skill" id="python"></div>
+            </div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-name"><i class="fab fa-html5"></i> HTML</div>
+            <div class="skill-bar">
+                <div class="skill" id="html"></div>
+            </div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-name"><i class="fab fa-css3-alt"></i> CSS</div>
+            <div class="skill-bar">
+                <div class="skill" id="css"></div>
+            </div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-name"><i class="fab fa-java"></i> Java</div>
+            <div class="skill-bar">
+                <div class="skill" id="java"></div>
+            </div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-name"><i class="fab fa-microsoft"></i> Power BI</div>
+            <div class="skill-bar">
+                <div class="skill" id="powerbi"></div>
+            </div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-name"><i class="fas fa-file-excel"></i> Excel</div>
+            <div class="skill-bar">
+                <div class="skill" id="excel"></div>
+            </div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-name"><i class="fas fa-cogs"></i> R Language</div>
+            <div class="skill-bar">
+                <div class="skill" id="r-language"></div>
+            </div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-name"><i class="fas fa-database"></i> MongoDB</div>
+            <div class="skill-bar">
+                <div class="skill" id="mongodb"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <video id="background-video" autoplay muted loop>
+            <source src="183108-870151713.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+    </div>
+
+    <!-- Back Button -->
+    <div class="back-button" onclick="goBack()">
+        <i class="fas fa-arrow-left"></i>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

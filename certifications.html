@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certifications</title>
+  <link rel="stylesheet" href="top.css">
+</head>
+<body>
+  <!-- Back Button -->
+  <div class="back-button">
+    <a href="#" onclick="window.history.back();">&#8592;</a>
+  </div>
+
+  <div class="video-container">
+    <video autoplay muted loop class="background-video">
+      <source src="183108-870151713.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
+  </div>
+
+  <div class="content">
+    <h1 class="center-heading">My Certifications</h1>
+
+    <div class="certifications">
+      <a href="Certificate.pdf" class="cert-link" target="_blank">Salesforce Virtual Internship</a>
+      <a href="Coursera KL6SUBY4Y6B5.pdf" class="cert-link" target="_blank">Coursera Google Crash Course on Python</a>
+      <a href="eCertificate (1).pdf" class="cert-link" target="_blank">Oracle Cloud Infrastructure 2024 Certified AI Foundations Associate</a>
+      <a href="freecodecamp.pdf" class="cert-link" target="_blank">freeCodeCamp Data Analysis with Python</a>
+    </div>
+
+    <!-- All Certifications in One Transparent Box -->
+    <div class="certification-images-box">
+      <div class="image-item">
+        <img src="Screenshot_21-12-2024_221627_.jpeg" alt="Salesforce Virtual Internship" onclick="openModal(this)">
+        <p class="cert-name">Salesforce Virtual Internship</p>
+      </div>
+      <div class="image-item">
+        <img src="Screenshot_21-12-2024_221741_.jpeg" alt="Coursera Google Crash Course on Python" onclick="openModal(this)">
+        <p class="cert-name">Coursera Google Crash Course on Python</p>
+      </div>
+      <div class="image-item">
+        <img src="Screenshot_21-12-2024_221918_.jpeg" alt="Oracle Cloud Infrastructure AI Foundations" onclick="openModal(this)">
+        <p class="cert-name">Oracle Cloud Infrastructure AI Foundations</p>
+      </div>
+      <div class="image-item">
+        <img src="Screenshot_21-12-2024_22208_.jpeg" alt="freeCodeCamp Data Analysis with Python" onclick="openModal(this)">
+        <p class="cert-name">freeCodeCamp Data Analysis with Python</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Image Preview -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <img class="modal-content" id="modalImage" />
+    <span class="close">&times;</span>
+  </div>
+
+  <script>
+    // Open the modal with image preview
+    function openModal(image) {
+      const modal = document.getElementById("imageModal");
+      const modalImage = document.getElementById("modalImage");
+      modal.style.display = "block";
+      modalImage.src = image.src;
+    }
+
+    // Close the modal
+    function closeModal() {
+      const modal = document.getElementById("imageModal");
+      modal.style.display = "none";
+    }
+  </script>
+</body>
+</html>

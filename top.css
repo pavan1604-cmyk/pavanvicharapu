@@ -1,0 +1,179 @@
+/* Full-screen background video styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: auto; /* Allow scrolling */
+  height: 100%; /* Ensure the body takes full height */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Back Button */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.back-button a {
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+/* Video Container */
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Video stays behind content */
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover; /* Ensure the video covers the entire screen */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Darker overlay */
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+
+/* Stylish Heading Font */
+.center-heading {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Certification Links */
+.certifications {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.cert-link {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cert-link:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+/* Certification Images Box */
+.certification-images-box {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.image-item {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent black box */
+  padding: 10px;
+}
+
+.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.image-item:hover img {
+  transform: scale(1.1);
+}
+
+.cert-name {
+  color: white;
+  font-size: 1rem;
+  margin-top: 10px;  /* Ensure it's below the image */
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Modal Styling for Image Preview */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 4;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+}
+
+.modal-content {
+  margin: 15% auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
